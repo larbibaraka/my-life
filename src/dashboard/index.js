@@ -1,22 +1,23 @@
 import React, { Fragment } from "react";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
-import Divider from '@material-ui/core/Divider';
+import Divider from "@material-ui/core/Divider";
+import Typography from '@material-ui/core/Typography';
 /**
  * import components
  */
-import Goals from './components/goals';
-import Habits from './components/habits';
-import Books from './components/books';
-import Thoughts from './components/thoughts';
-import Animes from './components/animes';
-import Movies from './components/movies';
-import Workout from './components/workout';
-import Workshop from './components/workshop';
-import socialMedia from './components/socialmedia';
-import Expense from './components/expense';
-import Diaries from './components/diaries';
-import Pics from './components/pics';
+import Goals from "./components/goals";
+import Habits from "./components/habits";
+import Books from "./components/books";
+import Thoughts from "./components/thoughts";
+import Animes from "./components/animes";
+import Movies from "./components/movies";
+import Workout from "./components/workout";
+import Workshop from "./components/workshop";
+import SocialMedia from "./components/socialmedia";
+import Expense from "./components/expense";
+import Diaries from "./components/diaries";
+import Pics from "./components/pics";
 
 import "./dashboard.scss";
 const useStyle = makeStyles(theme => ({
@@ -25,75 +26,82 @@ const useStyle = makeStyles(theme => ({
   },
   card: {
     minWidth: 280,
-    cursor : 'pointer'
+    cursor: "pointer"
   },
   media: {
     height: 0,
-    paddingTop: "56.25%", // 16:9
-   
+    paddingTop: "56.25%" // 16:9
   }
 }));
 export default () => {
   const classes = useStyle();
   return (
     <Fragment>
-      <h3>Productivity : </h3>
+      <Typography variant="h6" noWrap>
+          Productivity : 
+      </Typography>
+      <br/>
       <Grid container className={classes.root} spacing={9}>
         <Grid item sm={3}>
-          <Goals/>
+          <Goals />
         </Grid>
         {/*  */}
         <Grid item sm={3}>
-          <Habits/>
+          <Habits />
         </Grid>
         {/*  */}
         <Grid item sm={3}>
-          <Workout/>
+          <Workout />
         </Grid>
         {/*  */}
         <Grid item sm={3}>
-          <Books/>
+          <Books />
         </Grid>
         {/*  */}
       </Grid>
-      <Divider />
-      <h3>Ideas : </h3>
+      <br/>
+      <Typography variant="h6" noWrap>
+      Ideas :
+      </Typography>
+      <br/>
       <Grid container className={classes.root} spacing={9}>
         <Grid item sm={3}>
-          <Thoughts/>
+          <Thoughts />
         </Grid>
         {/*  */}
         <Grid item sm={3}>
-         <Workshop/>
+          <Workshop />
         </Grid>
         {/*  */}
         <Grid item sm={3}>
-         <Expense/>
+          <Expense />
         </Grid>
         {/*  */}
         <Grid item sm={3}>
-          <Diaries/>
+          <Diaries />
         </Grid>
         {/*  */}
       </Grid>
-       <Divider />
-       
-      <h3>Relax : </h3>
+      <br/>
+      <Typography variant="h6" noWrap>
+        Relax :
+      </Typography>
+      <br/>
       <Grid container className={classes.root} spacing={9}>
         <Grid item sm={3}>
-          <Movies/>
+          <Movies />
         </Grid>
         {/*  */}
         <Grid item sm={3}>
-          <Animes/>
+          <Animes />
         </Grid>
         {/*  */}
         <Grid item sm={3}>
-          <socialMedia/>
+          <SocialMedia />
         </Grid>
         {/*  */}
         <Grid item sm={3}>
-          <Pics/>
+          <Pics />
         </Grid>
       </Grid>
     </Fragment>
