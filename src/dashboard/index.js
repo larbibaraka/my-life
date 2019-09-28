@@ -18,7 +18,7 @@ export default () => {
   const classes = useStyle();
   return (
     <Fragment>
-      <Grid container className={classes.root} spacing={2}>
+      <Grid container className={classes.root} spacing={9}>
         <Grid item sm={3}>
           <Card className={classes.card}>
             <CardMedia
@@ -40,7 +40,7 @@ export default () => {
               title="Paella dish"
             />
             <CardContent>
-              <h1>Habits tracking</h1>
+              <h4>Habits tracking</h4>
             </CardContent>
           </Card>
         </Grid>
@@ -53,7 +53,7 @@ export default () => {
               title="Paella dish"
             />
             <CardContent>
-              <h1>Sport programm</h1>
+              <h4>Workout Program</h4>
             </CardContent>
           </Card>
         </Grid>
@@ -66,13 +66,13 @@ export default () => {
               title="Paella dish"
             />
             <CardContent>
-              <h1>Books</h1>
+              <h4>Books</h4>
             </CardContent>
           </Card>
         </Grid>
         {/*  */}
       </Grid>
-      <Grid container className={classes.root} spacing={2}>
+      <Grid container className={classes.root} spacing={9}>
         <Grid item sm={3}>
           <Card className={classes.card}>
             <CardMedia
@@ -81,7 +81,7 @@ export default () => {
               title="Paella dish"
             />
             <CardContent>
-              <h1>Dairy</h1>
+              <h4>my Diaries</h4>
             </CardContent>
           </Card>
         </Grid>
@@ -94,7 +94,7 @@ export default () => {
               title="Paella dish"
             />
             <CardContent>
-              <h1>Movies to watch</h1>
+              <h4>Movies to watch</h4>
             </CardContent>
           </Card>
         </Grid>
@@ -107,7 +107,7 @@ export default () => {
               title="Paella dish"
             />
             <CardContent>
-              <h1>Thoughts</h1>
+              <h4>Thoughts</h4>
             </CardContent>
           </Card>
         </Grid>
@@ -120,13 +120,13 @@ export default () => {
               title="Paella dish"
             />
             <CardContent>
-              <h1>expense tracker</h1>
+              <h4>expense tracker</h4>
             </CardContent>
           </Card>
         </Grid>
         {/*  */}
-        </Grid>
-        <Grid container className={classes.root} spacing={2}>
+       </Grid>
+      <Grid container className={classes.root} spacing={9}>
         <Grid item sm={3}>
           <Card className={classes.card}>
             <CardMedia
@@ -135,7 +135,7 @@ export default () => {
               title="Paella dish"
             />
             <CardContent>
-              <h1>social media pages</h1>
+              <h4>social media pages</h4>
             </CardContent>
           </Card>
         </Grid>
@@ -148,11 +148,37 @@ export default () => {
               title="Paella dish"
             />
             <CardContent>
-              <h1>pictures i loved</h1>
+              <h4>pictures i loved</h4>
             </CardContent>
           </Card>
         </Grid>
-      </Grid>
+        {/*  */}
+        <Grid item sm={3}>
+          <Card className={classes.card}>
+            <CardMedia
+              className={classes.media}
+              image="/static/images/cards/paella.jpg"
+              title="Paella dish"
+            />
+            <CardContent>
+              <h4>Workshops</h4>
+            </CardContent>
+          </Card>
+        </Grid>
+        {/*  */}
+        <Grid item sm={3}>
+          <Card className={classes.card}>
+            <CardMedia
+              className={classes.media}
+              image="/static/images/cards/paella.jpg"
+              title="Paella dish"
+            />
+            <CardContent>
+              <h4>Animes</h4>
+            </CardContent>
+          </Card>
+        </Grid>
+    </Grid>
     </Fragment>
   );
 };
