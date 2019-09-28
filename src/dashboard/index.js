@@ -5,6 +5,7 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from '@material-ui/core/CardMedia';
 import { makeStyles } from "@material-ui/core/styles";
+
 import "./dashboard.scss";
 const useStyle = makeStyles(theme => ({
   root: {
@@ -12,7 +13,11 @@ const useStyle = makeStyles(theme => ({
   },
   card: {
     //minWidth: 275
-  }
+  },
+  media: {
+    height: 0,
+    paddingTop: '56.25%', // 16:9
+  },
 }));
 export default () => {
   const classes = useStyle();
@@ -23,9 +28,10 @@ export default () => {
           <Card className={classes.card}>
             <CardMedia
               className={classes.media}
-              image="/static/images/cards/paella.jpg"
-              title="Paella dish"
+              image="/static/images/goaltracker.jpg"
+              title=""
             />
+             {/* <img src={Goals} alt="Logo" /> */}
             <CardContent>
               <h4>Goals tracking</h4>
             </CardContent>
@@ -36,8 +42,8 @@ export default () => {
           <Card className={classes.card}>
             <CardMedia
               className={classes.media}
-              image="/static/images/cards/paella.jpg"
-              title="Paella dish"
+              image="/static/images/habits.jpg"
+              title=""
             />
             <CardContent>
               <h4>Habits tracking</h4>
@@ -49,7 +55,7 @@ export default () => {
           <Card className={classes.card}>
             <CardMedia
               className={classes.media}
-              image="/static/images/cards/paella.jpg"
+              image="/static/images/workout_program.jpg"
               title="Paella dish"
             />
             <CardContent>
@@ -62,7 +68,7 @@ export default () => {
           <Card className={classes.card}>
             <CardMedia
               className={classes.media}
-              image="/static/images/cards/paella.jpg"
+              image="/static/images/books.jpg"
               title="Paella dish"
             />
             <CardContent>
@@ -77,7 +83,7 @@ export default () => {
           <Card className={classes.card}>
             <CardMedia
               className={classes.media}
-              image="/static/images/cards/paella.jpg"
+              image="/static/images/diaries.jpg"
               title="Paella dish"
             />
             <CardContent>
@@ -90,7 +96,7 @@ export default () => {
           <Card className={classes.card}>
             <CardMedia
               className={classes.media}
-              image="/static/images/cards/paella.jpg"
+              image="/static/images/movies.jpg"
               title="Paella dish"
             />
             <CardContent>
@@ -103,7 +109,7 @@ export default () => {
           <Card className={classes.card}>
             <CardMedia
               className={classes.media}
-              image="/static/images/cards/paella.jpg"
+              image="/static/images/thoughts.jpg"
               title="Paella dish"
             />
             <CardContent>
@@ -116,7 +122,7 @@ export default () => {
           <Card className={classes.card}>
             <CardMedia
               className={classes.media}
-              image="/static/images/cards/paella.jpg"
+              image="/static/images/expense-tracking.png"
               title="Paella dish"
             />
             <CardContent>
@@ -131,7 +137,7 @@ export default () => {
           <Card className={classes.card}>
             <CardMedia
               className={classes.media}
-              image="/static/images/cards/paella.jpg"
+              image="/static/images/facebook.jpg"
               title="Paella dish"
             />
             <CardContent>
@@ -144,7 +150,7 @@ export default () => {
           <Card className={classes.card}>
             <CardMedia
               className={classes.media}
-              image="/static/images/cards/paella.jpg"
+              image="/static/images/pics.jpg"
               title="Paella dish"
             />
             <CardContent>
@@ -157,7 +163,7 @@ export default () => {
           <Card className={classes.card}>
             <CardMedia
               className={classes.media}
-              image="/static/images/cards/paella.jpg"
+              image="/static/images/workshop.jpg"
               title="Paella dish"
             />
             <CardContent>
@@ -170,7 +176,7 @@ export default () => {
           <Card className={classes.card}>
             <CardMedia
               className={classes.media}
-              image="/static/images/cards/paella.jpg"
+              image="/static/images/animes.jpg"
               title="Paella dish"
             />
             <CardContent>
