@@ -7,7 +7,7 @@ import NavBar from "./navbar";
 import { BrowserRouter, Link, Route, Switch, Redirect } from "react-router-dom";
  
 export default () => {
-  const [login , setLogin] = useState(false)
+  const [login , setLogin] = useState(true)
   if(!login) {
    return <Redirect to="/"/>
   }
