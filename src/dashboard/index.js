@@ -52,9 +52,6 @@ export default () => {
         <Grid container className={classes.root} spacing={9}>
           <Grid item sm={3}>
             <Goals />
-            <Link to='/test'>
-                <button>try me</button>
-            </Link>
           </Grid>
           {/*  */}
           <Grid item sm={3}>
@@ -117,11 +114,11 @@ export default () => {
         </Grid>
       </Fragment>
       </Container>
-      <Switch>
+      {/* <Switch>
           <Route exact path="/" render={() => <div>Home</div>} />
           <Route path="/test" render={() => <div>baraka</div>} />
           <Route render={() => <h3>Not found</h3>} />
-        </Switch>
+        </Switch> */}
    
     </BrowserRouter>
   );
