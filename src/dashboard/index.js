@@ -21,7 +21,6 @@ import Pics from "./components/pics";
 /************************************************************* */
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 
-import "./dashboard.scss";
 const useStyle = makeStyles(theme => ({
   root: {
     flexGrow: 1
@@ -38,14 +37,22 @@ const useStyle = makeStyles(theme => ({
     maxWidth: "1200px"
   }
 }));
-export default () => {
+export default ({match}) => {
   const classes = useStyle();
+  console.log("match  : ", {match})
+
+  
+
+
+
+
+
+
   return (
     <BrowserRouter>
        <Container className={classes.fixed}>
-      <Fragment>
-       
-        <Typography variant="h6" noWrap>
+         <Fragment>
+      <Typography variant="h6" noWrap>
           Productivity :
         </Typography>
         <br />
@@ -112,14 +119,13 @@ export default () => {
             <Pics />
           </Grid>
         </Grid>
+         <Switch>
+          <Route exact path="/" render={() => <div>Home</div>} />
+          <Route path={`${match.url}/test`} render={() => <div>baraka</div>} />
+          
+        </Switch>
       </Fragment>
       </Container>
-      {/* <Switch>
-          <Route exact path="/" render={() => <div>Home</div>} />
-          <Route path="/test" render={() => <div>baraka</div>} />
-          <Route render={() => <h3>Not found</h3>} />
-        </Switch> */}
-   
     </BrowserRouter>
   );
 };
