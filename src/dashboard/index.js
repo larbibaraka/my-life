@@ -1,131 +1,29 @@
 import React, { Fragment } from "react";
-import Grid from "@material-ui/core/Grid";
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Container from "@material-ui/core/Container";
-/**
- * import components
- */
-import Goals from "./components/goals";
-import Habits from "./components/habits";
-import Books from "./components/books";
-import Thoughts from "./components/thoughts";
-import Animes from "./components/animes";
-import Movies from "./components/movies";
-import Workout from "./components/workout";
-import Workshop from "./components/workshop";
-import SocialMedia from "./components/socialmedia";
-import Expense from "./components/expense";
-import Diaries from "./components/diaries";
-import Pics from "./components/pics";
-/************************************************************* */
-import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
-
-const useStyle = makeStyles(theme => ({
-  root: {
-    flexGrow: 1
-  },
-  card: {
-    minWidth: 280,
-    cursor: "pointer"
-  },
-  media: {
-    height: 0,
-    paddingTop: "56.25%" // 16:9
-  },
-  fixed: {
-    maxWidth: "1200px"
-  }
-}));
-export default ({match}) => {
-  const classes = useStyle();
-  console.log("match  : ", {match})
-
-  
-
-
-
-
-
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import MyDashboard from './Dashboard/dashboard';
+export default ({ match }) => {
+  console.log("match  : ", { match });
 
   return (
     <BrowserRouter>
-       <Container className={classes.fixed}>
-         <Fragment>
-      <Typography variant="h6" noWrap>
-          Productivity :
-        </Typography>
-        <br />
-        <Grid container className={classes.root} spacing={9}>
-          <Grid item sm={3}>
-            <Goals />
-          </Grid>
-          {/*  */}
-          <Grid item sm={3}>
-            <Habits />
-          </Grid>
-          {/*  */}
-          <Grid item sm={3}>
-            <Workout />
-          </Grid>
-          {/*  */}
-          <Grid item sm={3}>
-            <Books />
-          </Grid>
-          {/*  */}
-        </Grid>
-        <br />
-        <Typography variant="h6" noWrap>
-          Ideas :
-        </Typography>
-        <br />
-        <Grid container className={classes.root} spacing={9}>
-          <Grid item sm={3}>
-            <Thoughts />
-          </Grid>
-          {/*  */}
-          <Grid item sm={3}>
-            <Workshop />
-          </Grid>
-          {/*  */}
-          <Grid item sm={3}>
-            <Expense />
-          </Grid>
-          {/*  */}
-          <Grid item sm={3}>
-            <Diaries />
-          </Grid>
-          {/*  */}
-        </Grid>
-        <br />
-        <Typography variant="h6" noWrap>
-          Relax :
-        </Typography>
-        <br />
-        <Grid container className={classes.root} spacing={9}>
-          <Grid item sm={3}>
-            <Movies />
-          </Grid>
-          {/*  */}
-          <Grid item sm={3}>
-            <Animes />
-          </Grid>
-          {/*  */}
-          <Grid item sm={3}>
-            <SocialMedia />
-          </Grid>
-          {/*  */}
-          <Grid item sm={3}>
-            <Pics />
-          </Grid>
-        </Grid>
-         <Switch>
-          <Route exact path="/" render={() => <div>Home</div>} />
-          <Route path={`${match.url}/test`} render={() => <div>baraka</div>} />
-          
+      <Fragment>
+        <Switch>
+          <Route exact path="/dashboard" render={(props) => <MyDashboard {...props} />} />
+          <Route  path="/dashboard/goals" render={() => <h3>Goals :p </h3>} />
+          <Route  path="/dashboard/habits" render={() => <h3>habits :p </h3>} />
+          <Route  path="/dashboard/books" render={() => <h3>books :p </h3>} />
+          <Route  path="/dashboard/workout" render={() => <h3>workout :p </h3>} />
+          <Route  path="/dashboard/workshop" render={() => <h3>workshop :p </h3>} />
+          <Route  path="/dashboard/social_media" render={() => <h3>social_media :p </h3>} />
+          <Route  path="/dashboard/expense" render={() => <h3>expense :p </h3>} />
+          <Route  path="/dashboard/animes" render={() => <h3>animes :p </h3>} />
+          <Route  path="/dashboard/movies" render={() => <h3>movies :p </h3>} />
+          <Route  path="/dashboard/pics" render={() => <h3>pics :p </h3>} />
+          <Route  path="/dashboard/thoughts" render={() => <h3>thoughts :p </h3>} />
+          <Route  path="/dashboard/diaries" render={() => <h3>diaries :p </h3>} />
+          <Route render={() => <h3>Not found</h3>} />
         </Switch>
       </Fragment>
-      </Container>
     </BrowserRouter>
   );
 };
