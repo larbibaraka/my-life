@@ -19,7 +19,7 @@ import Expense from "../components/expense";
 import Diaries from "../components/diaries";
 import Pics from "../components/pics";
 /************************************************************* */
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const useStyle = makeStyles(theme => ({
   root: {
@@ -42,45 +42,7 @@ export default () => {
   const classes = useStyle();
   const [choice, setChoice] = useState("goalsa");
 
-  switch (choice) {
-    case "goals": {
-      return <Redirect to="/dashboard/goals" />;
-    }
-    case "habits": {
-      return <Redirect to="/dashboard/habits" />;
-    }
-    case "books": {
-      return <Redirect to="/dashboard/books" />;
-    }
-    case "thoughts": {
-      return <Redirect to="/dashboard/thoughts" />;
-    }
-    case "animes": {
-      return <Redirect to="/dashboard/animes" />;
-    }
-    case "movies": {
-      return <Redirect to="/dashboard/movies" />;
-    }
-    case "workout": {
-      return <Redirect to="/dashboard/workout" />;
-    }
-    case "workshop": {
-      return <Redirect to="/dashboard/workshop" />;
-    }
-    case "social_media": {
-      return <Redirect to="/dashboard/social_media" />;
-    }
-    case "expense": {
-      return <Redirect to="/dashboard/expense" />;
-    }
-    case "diaries": {
-      return <Redirect to="/dashboard/diaries" />;
-    }
-    case "pics": {
-      return <Redirect to="/dashboard/pics" />;
-    }
 
-    default:
       return (
         <Container className={classes.fixed}>
           <Fragment>
@@ -90,19 +52,27 @@ export default () => {
             <br />
             <Grid container className={classes.root} spacing={9}>
               <Grid item sm={3}>
-                <Goals />
+                <Link to="/dashboard/goals">
+                  <Goals />
+                </Link>
               </Grid>
               {/*  */}
               <Grid item sm={3}>
-                <Habits />
+                <Link to="/dashboard/habits">
+                  <Habits />
+                </Link>
               </Grid>
               {/*  */}
               <Grid item sm={3}>
-                <Workout />
+                <Link to="/dashboard/workout">
+                  <Workout />
+                </Link>
               </Grid>
               {/*  */}
               <Grid item sm={3}>
-                <Books />
+                <Link to="/dashboard/books">
+                  <Books />
+                </Link>
               </Grid>
               {/*  */}
             </Grid>
@@ -113,19 +83,28 @@ export default () => {
             <br />
             <Grid container className={classes.root} spacing={9}>
               <Grid item sm={3}>
-                <Thoughts />
+                <Link to="/dashboard/thoughts">
+                  <Thoughts />
+                </Link>
+              </Grid>
+              {/*  */}
+
+              <Grid item sm={3}>
+                <Link to="/dashboard/workshop">
+                  <Workshop />
+                </Link>
               </Grid>
               {/*  */}
               <Grid item sm={3}>
-                <Workshop />
+                <Link to="/dashboard/expense">
+                  <Expense />
+                </Link>
               </Grid>
               {/*  */}
               <Grid item sm={3}>
-                <Expense />
-              </Grid>
-              {/*  */}
-              <Grid item sm={3}>
-                <Diaries />
+                <Link to="/dashboard/diaries">
+                  <Diaries />
+                </Link>
               </Grid>
               {/*  */}
             </Grid>
@@ -136,23 +115,31 @@ export default () => {
             <br />
             <Grid container className={classes.root} spacing={9}>
               <Grid item sm={3}>
-                <Movies />
+                <Link to="/dashboard/movies">
+                  <Movies />
+                </Link>
               </Grid>
               {/*  */}
               <Grid item sm={3}>
-                <Animes />
+                <Link to="/dashboard/animes">
+                  <Animes />
+                </Link>
               </Grid>
               {/*  */}
               <Grid item sm={3}>
-                <SocialMedia />
+                <Link to="/dashboard/social_media">
+                  <SocialMedia />
+                </Link>
               </Grid>
               {/*  */}
               <Grid item sm={3}>
-                <Pics />
+                <Link to="/dashboard/pics">
+                  <Pics />
+                </Link>
               </Grid>
             </Grid>
           </Fragment>
         </Container>
       );
-  }
+  
 };
