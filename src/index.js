@@ -13,7 +13,6 @@ ReactDOM.render(
     <Switch>
       <Route exact path="/" render={() => <Login />} />
       <Route path="/dashboard" render={(props) => <Dashboard {...props} />} />
-      <Route path = "/dashboard/goals" render={(props) => <Dashboard {...props} />} />
       <Route render={() => <h3>Not found</h3>} />
     </Switch>
   </BrowserRouter>,

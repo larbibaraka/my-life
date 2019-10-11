@@ -1,11 +1,11 @@
-import React from 'react';
-
+import React , {Fragment} from 'react';
+import GoalsTable from './GoalsTable';
  
 
 export default  () =>{
     return (
-        <div>
-            Goals :)
-        </div>
+      <Fragment>
+          <GoalsTable/>
+      </Fragment>
     );
     }

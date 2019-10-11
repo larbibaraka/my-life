@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import MyDashboard from './Dashboard/dashboard';
+import GoalsContainer from './containers/goalsContainer';
 export default ({ match }) => {
   console.log("match  : ", { match });
 
@@ -8,8 +9,8 @@ export default ({ match }) => {
     <BrowserRouter>
       <Fragment>
         <Switch>
-          <Route exact path="/dashboard" render={(props) => <MyDashboard {...props} />} />
-          <Route  path="/dashboard/goals" render={() => <h3>Goals :p </h3>} />
+          <Route  exact path="/dashboard" render={(props) => <MyDashboard {...props} />} />
+          <Route  path="/dashboard/goals" render={(props) => <GoalsContainer {...props} />} />
           <Route  path="/dashboard/habits" render={() => <h3>habits :p </h3>} />
           <Route  path="/dashboard/books" render={() => <h3>books :p </h3>} />
           <Route  path="/dashboard/workout" render={() => <h3>workout :p </h3>} />
@@ -21,7 +22,6 @@ export default ({ match }) => {
           <Route  path="/dashboard/pics" render={() => <h3>pics :p </h3>} />
           <Route  path="/dashboard/thoughts" render={() => <h3>thoughts :p </h3>} />
           <Route  path="/dashboard/diaries" render={() => <h3>diaries :p </h3>} />
-          <Route render={() => <h3>Not found</h3>} />
         </Switch>
       </Fragment>
     </BrowserRouter>

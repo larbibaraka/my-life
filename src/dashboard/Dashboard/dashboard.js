@@ -20,6 +20,7 @@ import Diaries from "../components/diaries";
 import Pics from "../components/pics";
 /************************************************************* */
 import { Link } from "react-router-dom";
+import './dashboard.scss';
 
 const useStyle = makeStyles(theme => ({
   root: {
@@ -40,10 +41,8 @@ const useStyle = makeStyles(theme => ({
 
 export default () => {
   const classes = useStyle();
-  const [choice, setChoice] = useState("goalsa");
-
-
-      return (
+  
+  return (
         <Container className={classes.fixed}>
           <Fragment>
             <Typography variant="h6" noWrap>
