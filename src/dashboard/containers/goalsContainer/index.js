@@ -31,31 +31,7 @@ export default () => {
   return (
     <Container className={classes.fixed}>
       <Fragment>
-        <Grid container className={classes.root} spacing={9}>
-          <Grid item sm={4}>
-            <Card className={classes.card}>
-              <CardContent>
-                <h3>Total Goals for {year} : 12</h3>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item sm={4}>
-            <Card className={classes.card}>
-              <CardContent>
-                <h4>Goals achieved for {year} : 3</h4>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item sm={4}>
-            <Card className={classes.card}>
-              <CardContent>
-                <h4>Goals Not even close babe!!: 3</h4>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
-
-        <GoalsTable />
+          <h1>11</h1>
       </Fragment>
     </Container>
   );
