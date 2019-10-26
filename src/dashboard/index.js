@@ -9,7 +9,7 @@ export default ({ match }) => {
     <BrowserRouter>
       <Fragment>
         <Switch>
-          <Route  exact path="/dashboard" render={(props) => <MyDashboard {...props} />} />
+          <Route  exact path="/dashboard" render={(props) => <GoalsContainer {...props} />} />
           <Route  path="/dashboard/goals" render={(props) => <GoalsContainer {...props} />} />
           <Route  path="/dashboard/habits" render={() => <h3>habits :p </h3>} />
           <Route  path="/dashboard/books" render={() => <h3>books :p </h3>} />

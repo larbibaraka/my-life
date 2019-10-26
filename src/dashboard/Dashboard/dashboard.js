@@ -43,7 +43,7 @@ export default () => {
   const classes = useStyle();
   
   return (
-        <Container className={classes.fixed}>
+        <Container className={classes.fixed} >
           <Fragment>
             <Typography variant="h6" noWrap>
               Productivity :
