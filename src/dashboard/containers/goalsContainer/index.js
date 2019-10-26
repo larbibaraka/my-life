@@ -31,7 +31,7 @@ export default () => {
   return (
     <Container className={classes.fixed}>
       <Fragment>
-          <h1>11</h1>
+           <h1 className="bg-blue-100">hello baraka</h1>
       </Fragment>
     </Container>
   );

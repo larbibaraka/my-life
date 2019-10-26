@@ -6,6 +6,11 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Dashboard from "./dashboard";
 import Login from "./login";
+/**
+ * import the tailwindcss
+ *
+ */
+import './index.css';
 ReactDOM.render(
   <BrowserRouter>
     <CssBaseline />
